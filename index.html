@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <!-- アニメジャンル -->
@@ -12,18 +13,18 @@
         <legend>ジャンル</legend>
       
         <div>
-          <input type="checkbox" id="huey" name="genre" value="huey" value="hoge" onclick="displayGenres(this)"/>
-          <label for="huey">ファンタジー</label>
+          <input type="checkbox" id="fantasy" name="genre" value="fantasy"  onclick="displayGenres(this)"/>
+          <label for="fantasy">ファンタジー</label>
         </div>
       
         <div>
-          <input type="checkbox" id="dewey" name="genre" value="dewey" />
-          <label for="dewey">恋愛</label>
+          <input type="checkbox" id="love" name="genre" value="love" onclick="displayGenres(this)"/>
+          <label for="love">恋愛</label>
         </div>
       
         <div>
-          <input type="checkbox" id="louie" name="genre" value="louie" />
-          <label for="louie">スポーツ</label>
+          <input type="checkbox" id="sports" name="genre" value="sports" onclick="displayGenres(this)"/>
+          <label for="sports">スポーツ</label>
         </div>
       </fieldset>
       <br>
@@ -57,22 +58,29 @@
         <option value="2012">2012</option>
         </select>
     </fieldset>
+    <br>
     <!-- 映画かtvか -->
     <fieldset>
         <legend>映画orテレビ</legend>
-        
         <div>
             <input type="radio" id="tv" name="yoso" value="huey"  />
             <label for="tv">TVアニメ</label>
         </div>
-        
         <div>
             <input type="radio" id="movie" name="yoso" value="dewey" />
             <label for="movie">劇場アニメ</label>
         </div>
     </fieldset>
-    <fieldset>
-        <legend>選択された要素やジャンル</legend>
-    </fieldset>
+    <br>
+    <!-- 選択した要素やジャンル -->
+    <div class="screen_field">
+        <fieldset class="">
+            <legend>選択された要素やジャンル</legend>
+            <div id="screen"class="screen">
+                <div id = "inner_screen" ></div>
+            </div>
+        </fieldset>
+        <br>
+    </div>
 </body>
 </html>
